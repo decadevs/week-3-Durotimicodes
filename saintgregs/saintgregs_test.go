@@ -152,7 +152,7 @@ func TestIfExpel(t *testing.T) {
 		//Test Case 1:
 		{Principal{Basic: RecordsOfIncomingStudent{StudentFname: "Balogun", StudentLname: "Ibrahim", RegNumber: "112237", Interest: "Science", AdmissionAge: 14, StudentBalance: 0.00, PaidSchoolFees: "True", JsceMathsScore: 70}, BasicTwo: AdmittedStudent{Attendance: 30}}, 30, "Dear Gregs Student, Unfortunately You Have Been Expelled From Saint Gregorys College,based on your low attendance in class Signed"},
 		//Test Case 2:
-		{Principal{Basic: RecordsOfIncomingStudent{StudentFname: "Sinyobola", StudentLname: "Quadri", RegNumber: "112245", Interest: "Science", AdmissionAge: 13, StudentBalance: 0.00, PaidSchoolFees: "True", JsceMathsScore: 90}, BasicTwo: AdmittedStudent{Attendance: 70}}, 70, "You are Good Great With Attending Class. Keep it up"},
+		{Principal{Basic: RecordsOfIncomingStudent{StudentFname: "Sinyobola", StudentLname: "Quadri", RegNumber: "112245", Interest: "Science", AdmissionAge: 13, StudentBalance: 0.00, PaidSchoolFees: "True", JsceMathsScore: 90}, BasicTwo: AdmittedStudent{Attendance: 70}}, 70, "You have a Good in Attendance record Class. Keep it up"},
 	}
 	for _, value := range Expel {
 		output := value.input0.ExpelGregsStudent(value.input1)
