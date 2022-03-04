@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 	"task3-secondary-school-App/saintgregs"
 )
 
@@ -16,7 +17,7 @@ Student average grades are checked and this is used to calculate the student's G
 given to each student based on the students GPA
 
 A principal has access to all the information of Admitted student and can checks his/her
-attendance. If attendance if less than 50, student is expelled from the school, else studen
+attendance. If attendance if less than 50, student is expelled from the school, else student
 will be given a compilment.
 
 The Teacher is incharge of scoring and grading students, prints out the report card
@@ -65,7 +66,7 @@ func main() {
 				JsceMathsScore: studRecord.JsceMathsScore,
 			},
 			Grades:     []float64{90, 90, 90, 90, 70, 95},
-			Attendance: 40,
+			Attendance: 50,
 		},
 	}
 	studAdmit.GiveStudentOffer(studAdmit.Basic.StudentBalance, studAdmit.Basic.JsceMathsScore)
@@ -121,7 +122,7 @@ func main() {
 		FName:                 "Abayomi",
 		LName:                 "ogunsanya",
 		Age:                   45,
-		HighestQualifications: "WAEC",
+		HighestQualifications: strings.ToUpper("waec"),
 	}
 	nonAcademicStaff := BiodataNonAStaff.SetPosition(BiodataNonAStaff.HighestQualifications)
 	fmt.Println(nonAcademicStaff)

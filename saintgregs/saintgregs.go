@@ -34,7 +34,7 @@ func (sr *RecordsOfIncomingStudent) Display() {
 	Fname := sr.StudentFname
 	Lname := sr.StudentLname
 
-	if Fname != "" || Lname != " " {
+	if Fname != " " || Lname != " " {
 		fmt.Printf("%s %s. \nAge: %d. \nRegistration Number:%s\nStudents fee Balance:%f\nJSCE Mathematic Score:%d\n",
 			sr.StudentLname, sr.StudentFname, sr.AdmissionAge, sr.RegNumber, sr.StudentBalance, sr.JsceMathsScore)
 		fmt.Println("Paid School Fees :", sr.CheckPaidFees())
@@ -139,7 +139,6 @@ func (as *AdmittedStudent) CommentOnFirstTerm() string {
 
 //PRINCIPAL EXPEL STUDENT BASED ON TWO CONDITIONS
 //1. IF STUDENTS ATTENDANCE IS LESS THAT 50
-//2. IF STUDENT GPA IS LESS THAN 2.50
 
 func (pp *Principal) ExpelGregsStudent(attendance int) string {
 	fmt.Println("\n============**NOTICE OF EXPULSION**===================")
@@ -154,7 +153,7 @@ func (pp *Principal) ExpelGregsStudent(attendance int) string {
 		if stdtAttendance < 50 {
 			expel += "Dear Gregs Student, Unfortunately You Have Been Expelled From Saint Gregorys College,based on your low attendance in class Signed"
 		} else {
-			expel += "You are Good Great With Attending Class. Keep it up"
+			expel += "You have a Good in Attendance record Class. Keep it up"
 		}
 	}
 	return expel
