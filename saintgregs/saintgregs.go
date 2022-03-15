@@ -34,7 +34,7 @@ func (sr *RecordsOfIncomingStudent) Display() {
 	Fname := sr.StudentFname
 	Lname := sr.StudentLname
 
-	if Fname != " " || Lname != " " {
+	if Fname != "" || Lname != "" {
 		fmt.Printf("%s %s. \nAge: %d. \nRegistration Number:%s\nStudents fee Balance:%f\nJSCE Mathematic Score:%d\n",
 			sr.StudentLname, sr.StudentFname, sr.AdmissionAge, sr.RegNumber, sr.StudentBalance, sr.JsceMathsScore)
 		fmt.Println("Paid School Fees :", sr.CheckPaidFees())
